@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Mảng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 font-sans">
+
+    <h1 class="text-2xl font-bold mb-6">Bài Tập Mảng JavaScript</h1>
+    
+    <!-- Nhập mảng -->
+    <div class="mb-8 pb-4 border-b-2 border-gray-300">
+        <h3 class="text-xl font-semibold mb-2">Nhập mảng số nguyên</h3>
+        <input type="number" id="inputNum" placeholder="Nhập số n..." class="border border-black p-1">
+        <button onclick="addNumber()" class="bg-blue-500 text-white p-1 px-3 ml-2">Thêm Số</button>
+        <p id="arrayDisplay" class="mt-4 font-bold text-lg text-blue-700">Mảng hiện tại: [ ]</p>
+    </div>
+
+    <!-- 10 chức năng -->
+    <div class="space-y-6">
+        <!-- 1 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">1. Tổng các số dương</h4>
+            <button onclick="sumPositive()" class="bg-green-500 text-white p-1 px-3 mb-2">Tính Tổng</button>
+            <p id="res1" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">2. Đếm số dương</h4>
+            <button onclick="countPositive()" class="bg-green-500 text-white p-1 px-3 mb-2">Đếm Số</button>
+            <p id="res2" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+        
+        <!-- 3 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">3. Tìm số nhỏ nhất</h4>
+            <button onclick="findMin()" class="bg-green-500 text-white p-1 px-3 mb-2">Tìm Min</button>
+            <p id="res3" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">4. Tìm số dương nhỏ nhất</h4>
+            <button onclick="findMinPositive()" class="bg-green-500 text-white p-1 px-3 mb-2">Tìm Min Dương</button>
+            <p id="res4" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">5. Tìm số chẵn cuối cùng</h4>
+            <button onclick="findLastEven()" class="bg-green-500 text-white p-1 px-3 mb-2">Tìm Số Chẵn Cuối</button>
+            <p id="res5" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">6. Đổi chỗ 2 giá trị</h4>
+            <input type="number" id="pos1" placeholder="Vị trí 1" class="border border-black p-1 w-24">
+            <input type="number" id="pos2" placeholder="Vị trí 2" class="border border-black p-1 w-24 ml-2">
+            <button onclick="swapElements()" class="bg-green-500 text-white p-1 px-3 ml-2 mb-2 mt-2">Đổi Chỗ</button>
+            <p id="res6" class="text-red-600 font-semibold mt-2">Kết quả</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">7. Sắp xếp tăng dần</h4>
+            <button onclick="sortAscending()" class="bg-green-500 text-white p-1 px-3 mb-2">Sắp Xếp</button>
+            <p id="res7" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">8. Tìm số nguyên tố đầu tiên</h4>
+            <button onclick="findFirstPrime()" class="bg-green-500 text-white p-1 px-3 mb-2">Tìm Số Nguyên Tố</button>
+            <p id="res8" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 9 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">9. Nhập mảng số thực, đếm số nguyên</h4>
+            <input type="number" id="inputFloat" step="any" placeholder="Nhập số thực..." class="border border-black p-1">
+            <button onclick="addFloat()" class="bg-blue-500 text-white p-1 px-3 ml-2 mb-2">Thêm Số Thực</button>
+            <p id="floatArrayDisplay" class="mb-4 text-blue-700">Mảng số thực: [ ]</p>
+            <button onclick="countIntegersInFloatArray()" class="bg-green-500 text-white p-1 px-3 mb-2">Đếm Số Nguyên</button>
+            <p id="res9" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+
+        <!-- 10 -->
+        <div class="border border-gray-400 p-4 bg-gray-100">
+            <h4 class="font-bold mb-2">10. So sánh lượng số dương và âm</h4>
+            <button onclick="comparePosNeg()" class="bg-green-500 text-white p-1 px-3 mb-2">So Sánh</button>
+            <p id="res10" class="text-red-600 font-semibold">Kết quả</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
